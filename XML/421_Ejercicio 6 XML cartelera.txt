@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del tipo de datos para el elemento peliculas -->
+  <xs:element name="peliculas" type="tipoPeliculas"/>
+
+  <!-- Definición del tipo de datos para el elemento pelicula -->
+  <xs:complexType name="tipoPelicula">
+    <xs:sequence>
+      <!-- Elementos obligatorios -->
+      <xs:element name="titulo" type="xs:string"/>
+      <xs:element name="pais-produccion" type="xs:string"/>
+      <xs:element name="generos" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:choice>
+        <xs:element name="clasificacion" type="tipoClasificacion"/>
+        <xs:element name="sin-clasificar"/>
+      </xs:choice>
+      <xs:element name="sinopsis" type="xs:string"/>
+      <xs:choice>
+        <xs:element name="director" type="xs:string"/>
+        <xs:element name="directora" type="xs:string"/>
+      </xs:choice>
+      <xs:element name="reparto" type="tipoReparto"/>
+    </xs:sequence>
+    <!-- Atributos obligatorios -->
+    <xs:attribute name="codigo" type="xs:string" use="required"/>
+    <xs:attribute name="duracion" type="xs:string" use="required"/>
+    <xs:attribute name="ano" type="xs:string" use="required"/>
+    <!-- Atributos opcionales -->
+    <xs:attribute name="titulo-original" type="xs:string" use="optional"/>
+    <xs:attribute name="web" type="tipoURL" use="optional"/>
+    <xs:attribute name="imdb" type="tipoURL" use="optional"/>
+    <xs:attribute name="cartel" type="xs:string" use="optional"/>
+  </xs:complexTyp
+.
