@@ -1,0 +1,21 @@
+Bueno esto seria de forma Interna
+<!DOCTYPE libro [
+  <!ELEMENT libro (autor, titulo)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ELEMENT titulo (#PCDATA)>
+]>
+<libro>
+  <autor>Miguel de Cervantes Saavedra</autor>
+  <titulo>El Quijote de la Mancha</titulo>
+</libro>
+-----------------------------------------------------
+Esto seria escrito de forma Externa
+<!ELEMENT libro (autor, titulo)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+
+<!DOCTYPE libro SYSTEM "libro.dtd">
+<libro>
+  <autor>Miguel de Cervantes Saavedra</autor>
+  <titulo>El Quijote de la Mancha</titulo>
+</libro>

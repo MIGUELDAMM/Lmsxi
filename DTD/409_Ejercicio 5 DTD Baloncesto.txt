@@ -1,0 +1,62 @@
+<!DOCTYPE equipos_de_baloncesto [
+  <!ELEMENT equipos_de_baloncesto (equipo, equipo)>
+  <!ELEMENT equipo (nombre, ciudad, entrenador, jugadores)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT ciudad (#PCDATA)>
+  <!ELEMENT entrenador (#PCDATA)>
+  <!ELEMENT jugadores (jugador, jugador, jugador, jugador)>
+  <!ELEMENT jugador (nombre, posicion, nacionalidad)>
+  <!ATTLIST jugador
+    posicion (Base|Escolta|Alero|Pivot) #REQUIRED
+  >
+]>
+
+<equipos_de_baloncesto>
+  <equipo>
+    <nombre>Equipo A</nombre>
+    <ciudad>Ciudad A</ciudad>
+    <entrenador>Entrenador A</entrenador>
+    <jugadores>
+      <jugador posicion="Base">
+        <nombre>Jugador 1</nombre>
+        <nacionalidad>País 1</nacionalidad>
+      </jugador>
+      <jugador posicion="Escolta">
+        <nombre>Jugador 2</nombre>
+        <nacionalidad>País 2</nacionalidad>
+      </jugador>
+      <jugador posicion="Alero">
+        <nombre>Jugador 3</nombre>
+        <nacionalidad>País 3</nacionalidad>
+      </jugador>
+      <jugador posicion="Pivot">
+        <nombre>Jugador 4</nombre>
+        <nacionalidad>País 4</nacionalidad>
+      </jugador>
+    </jugadores>
+  </equipo>
+
+  <equipo>
+    <nombre>Equipo B</nombre>
+    <ciudad>Ciudad B</ciudad>
+    <entrenador>Entrenador B</entrenador>
+    <jugadores>
+      <jugador posicion="Base">
+        <nombre>Jugador 5</nombre>
+        <nacionalidad>País 5</nacionalidad>
+      </jugador>
+      <jugador posicion="Escolta">
+        <nombre>Jugador 6</nombre>
+        <nacionalidad>País 6</nacionalidad>
+      </jugador>
+      <jugador posicion="Alero">
+        <nombre>Jugador 7</nombre>
+        <nacionalidad>País 7</nacionalidad>
+      </jugador>
+      <jugador posicion="Pivot">
+        <nombre>Jugador 8</nombre>
+        <nacionalidad>País 8</nacionalidad>
+      </jugador>
+    </jugadores>
+  </equipo>
+</equipos_de_baloncesto>
